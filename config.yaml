@@ -62,7 +62,7 @@ beef:
         # Note that this causes the BeEF server to trust the X-Forwarded-For HTTP header.
         # If the BeEF server is directly accessible, clients can spoof their connecting
         # IP address using this header to bypass the IP address permissions/exclusions.
-        allow_reverse_proxy: false
+        allow_reverse_proxy: true
 
         # Hook
         hook_file: "/hook.js"
