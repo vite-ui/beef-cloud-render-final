@@ -25,7 +25,7 @@ beef:
         # subnet of IP addresses that can hook to the framework
         permitted_hooking_subnet: ["0.0.0.0/0", "::/0"]
         # subnet of IP addresses that can connect to the admin UI
-        #permitted_ui_subnet: ["127.0.0.1/32", "::1/128"]
+        #permitted_ui_subnet: ["0.0.0.0/0", "::/0"]
         permitted_ui_subnet: ["0.0.0.0/0", "::/0"]
         # subnet of IP addresses that cannot be hooked by the framework
         excluded_hooking_subnet: []
@@ -53,10 +53,10 @@ beef:
         # If you're using a public domain name, reverse proxy, or port forwarding you must
         # configure the public-facing connection details here.
 
-        public:
-            host: "beef-c2-api-deploy-2.onrender.com"
-            port: "443"
-            https: false
+        #public:
+        #    host: "beef.local" # public hostname/IP address
+        #    port: "443" # public port (443 if the public server is using HTTPS)
+        #    https: false # true/false
 
         # If using any reverse proxy you should also set allow_reverse_proxy to true below.
         # Note that this causes the BeEF server to trust the X-Forwarded-For HTTP header.
