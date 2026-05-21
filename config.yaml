@@ -87,7 +87,7 @@ beef:
 
         # Imitate a specified web server (default root page, 404 default error page, 'Server' HTTP response header)
         web_server_imitation:
-            enable: true
+            enable: false
             type: "apache" # Supported: apache, iis, nginx
             hook_404: false # inject BeEF hook in HTTP 404 responses
             hook_root: false # inject BeEF hook in the server home page
