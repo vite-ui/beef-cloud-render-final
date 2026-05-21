@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: beef-c2-final-working
+    env: docker
+    plan: free
