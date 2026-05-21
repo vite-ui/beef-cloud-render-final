@@ -10,7 +10,7 @@ beef:
     # More verbose messages (server-side)
     debug: false
     # More verbose messages (client-side)
-    client_debug: true
+    client_debug: false
     # Used for generating secure tokens
     crypto_default_value_length: 80
 
@@ -25,7 +25,7 @@ beef:
         # subnet of IP addresses that can hook to the framework
         permitted_hooking_subnet: ["0.0.0.0/0", "::/0"]
         # subnet of IP addresses that can connect to the admin UI
-        #permitted_ui_subnet: ["0.0.0.0/0", "::/0"]
+        #permitted_ui_subnet: ["127.0.0.1/32", "::1/128"]
         permitted_ui_subnet: ["0.0.0.0/0", "::/0"]
         # subnet of IP addresses that cannot be hooked by the framework
         excluded_hooking_subnet: []
@@ -62,7 +62,7 @@ beef:
         # Note that this causes the BeEF server to trust the X-Forwarded-For HTTP header.
         # If the BeEF server is directly accessible, clients can spoof their connecting
         # IP address using this header to bypass the IP address permissions/exclusions.
-        allow_reverse_proxy: true
+        allow_reverse_proxy: false
 
         # Hook
         hook_file: "/hook.js"
@@ -87,7 +87,7 @@ beef:
 
         # Imitate a specified web server (default root page, 404 default error page, 'Server' HTTP response header)
         web_server_imitation:
-            enable: false
+            enable: true
             type: "apache" # Supported: apache, iis, nginx
             hook_404: false # inject BeEF hook in HTTP 404 responses
             hook_root: false # inject BeEF hook in the server home page
