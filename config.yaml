@@ -56,7 +56,7 @@ beef:
         public:
             host: "beef-c2-api-deploy-2.onrender.com"
             port: "443"
-            https: true
+            https: false
 
         # If using any reverse proxy you should also set allow_reverse_proxy to true below.
         # Note that this causes the BeEF server to trust the X-Forwarded-For HTTP header.
