@@ -1,6 +1,7 @@
-FROM beefproject/beef:latest
-USER root
-COPY config.yaml /beef/config.yaml
-RUN chown beef:beef /beef/config.yaml
-USER beef
-ENTRYPOINT ["/beef/beef"]
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY server.js ./
+EXPOSE 3000
+CMD ["node", "server.js"]
